@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/ds1307.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/External_eeprom.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/black_box.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/main.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/dashboard.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/matrix_keypad.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/clcd.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/uart.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/adc.c</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/ds1307.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/clcd.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/adc.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/i2c.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/uart.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/matrix_keypad.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/External_eeprom.h</file>
+            <file>file:/C:/Users/DELL/MPLABXProjects/PROJECT2/CAR_BLACK_BOX_PROJECT.X/i2c.c</file>
+        </group>
+    </open-files>
+</project-private>
