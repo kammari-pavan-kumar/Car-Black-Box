@@ -1,0 +1,172 @@
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+PROJECT TITLE : CAR BLACK BOX
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+PROJECT INFO :-
+
+            
+     The concept of Black Box is mainly heard by us in case of Aeroplanes. Also known as an event data recorder (EDR) or Accident data recorder (ADR) 
+the Black Box can be installed in some automobiles to record various events. 
+
+    This Car Black Box is an embedded system designed to monitor and record important vehicle events such as speed, gear changes, collisions, and time.
+The system uses a PIC18F4580 microcontroller, an RTC(Real-Time Clock) for maintaining time, and external EEPROM for permanently storing event logs.
+The recorded information can later be viewed through an LCD-based dashboard.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+HARDWARE USED :-
+
+1.PIC18F4580 - Main controller of the system .
+It is an 8-bit microcontroller from Microchip widely used in automotive and industrial embedded systems.
+Important Features
+Built-in CAN 2.0B module
+10-bit ADC
+EEPROM memory
+Multiple timers
+PWM module
+USART
+SPI
+I²C
+External interrupt support
+Low power operation.
+
+2.CLCD (Character LCD)- Displays dashboard information and menu options
+A 16×2 Character LCD serves as the vehicle dashboard.
+
+3.Matrix Keypad – Used for navigation and selecting different operations.
+
+4.RTC DS1307 – Maintains real-time HH:MM information.
+
+5.External EEPROM – Stores event logs even after power is removed.
+
+6.Potentiometer - A potentiometer is used to simulate analog sensor values.
+  Here we use for speed record. where use ADC concept.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+Working Principle:-
+
+->  By power on of board, Here we dispaly time, event, speed which is displayed using CLCD
+      __________________
+     | TIME      EV  SP |
+     | 14:33:33  ON  03 |
+     ___________________
+
+-> By using MK1,MK2,MK3 we change state i.e gear selection
+
+Available gear selections:
+Neutral
+1st Gear
+2nd Gear
+3rd Gear
+4th Gear
+5th Gear
+Reverse
+Collision Mode
+
+MK1 - Gear Increase
+MK2 - Gear Decrease
+MK3 - Collision Mode.
+
+and for speed change we use potentiometer.
+
+
+-> By pressing MK11 we enter into main menu
+ The main menu are 
+ - View Log
+ - Set Time 
+ - Download Log 
+ - Clear Log
+
+Here,
+MK1 - DOWN
+MK2 - UP
+     ____________________
+     | -> VIEW LOG      |
+     |    DOWNLOAD LOG  |
+     ___________________
+
+     ____________________
+     |    CLEAR LOG      |
+     | -> SET TIME       |
+     ___________________
+  MK11 - to enter in to specific log.
+  By pressing MK12 we return to dashboard.
+
+View log 
+
+      ___________________
+     | L TIME      EV  SP |
+     | 0 14:33:33  ON  03 |
+     ____________________
+  - In this view log whatever log events you stored that should display in CLCD.
+  - Log event can be stored only when gear changes.
+  - The UP / DOWN keys are used to navigate.
+  - A press of exit Key MK12 should logout.
+
+
+Download log 
+   - CLCD - Download log successful. (Return to Menu screen)
+   - UART - Print all stored Logs.
+
+Clear log  
+   - All logs should be Cleared.
+   - CLCD - Clear log successful.
+
+
+Set time 
+
+      __________________
+     |    RESET TIME     |
+     |    14:33:00       |
+     ___________________ 
+   - MK1 key - Increment field 
+   - MK2 key - field change 
+   - MK11 key should set time.
+   - MK12 key should logout.
+--------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Protocol Used – I²C
+
+The I²C (Inter-Integrated Circuit) protocol is used for communication between the PIC18F4580 and peripherals such as the DS1307 RTC and external EEPROM.
+
+I²C is a two-wire serial communication protocol:
+
+SDA (Serial Data) – Carries data.
+SCL (Serial Clock) – Carries the clock signal.
+It supports communication between multiple devices using device addresses.
+The microcontroller acts as the master, while the RTC and EEPROM act as slave devices.
+Each slave has a unique address, allowing the microcontroller to communicate with the required device.
+It reduces the number of GPIO pins required compared with parallel communication.
+
+In the Car Black Box, the RTC provides the current HH:MM:SS, while the EEPROM is used to permanently store event information.
+
+
+
+A circular buffer is used to efficiently manage the limited EEPROM space available for storing event logs.
+
+Instead of continuously increasing the EEPROM address, the storage area is treated as a circular structure. When the buffer reaches its last location, 
+the next event is stored again from the first location.
+
+For example, if the EEPROM can store 10 logs, If all 10 locations are occupied and a new event occurs, then the oldest log is overwritten by the newest log.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Applications
+
+The Car Black Box can be used for 
+ - vehicle event monitoring
+ - accident/event analysis
+ - driver monitoring 
+ - and maintaining a historical record of vehicle activity.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+Conclusion
+
+The Car Black Box provides a simple and reliable embedded solution for recording important vehicle events. By combining the PIC18F4580, RTC, LCD, 
+keypad and external EEPROM, the system can display real-time vehicle information, maintain accurate event timestamps and store logs for later analysis.
+------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+
+
